@@ -2,8 +2,8 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-        
         backgroundColor: '#E8EAED',
+        marginTop: 25,
     },
     tasksWrapper: {
         paddingTop: 80,
@@ -42,8 +42,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderColor: '#C0C0C0',
         borderWidth: 1,
-        //last alteration
-        marginVertical: 0
     },
     addText: {},
 });

@@ -31,30 +31,31 @@ export default function Home() {
 
     return (
         <View style={styles.container}>
-            <ScrollView
-                contentContainerStyle={{
-                    flexGrow: 1
-                }}
-                keyboardShouldPersistTaps='handled'
-            >
-                <View style={styles.tasksWrapper}>
-                    <Text style={styles.sectionTitle}>Today's tasks</Text>
-                    <View style={styles.items}>
-                        {
-                            taskItems.map((item: any, index: any) => {
-                                return (
-                                    <TouchableOpacity key={index} onPress={() => completeTask(index)}>
-                                        <Task text={item} />
-                                    </TouchableOpacity>
-                                )
-                            })
-                        }
-                    </View>
-                </View>
-            </ScrollView>
+
+            <View style={styles.tasksWrapper}>
+                <Text style={styles.sectionTitle}>Today's tasks</Text>
+
+                <ScrollView
+                    contentContainerStyle={{
+                        flexGrow: 1
+                    }}
+                    keyboardShouldPersistTaps='handled'
+                    style={styles.items}>
+                    {
+                        taskItems.map((item: any, index: any) => {
+                            return (
+                                <TouchableOpacity key={index} onPress={() => completeTask(index)}>
+                                    <Task text={item} />
+                                </TouchableOpacity>
+                            );
+                        })
+                    }
+                </ScrollView>
+            </View>
+
 
             <KeyboardAvoidingView
-                behavior={Platform.OS == 'ios' ? 'padding' : 'height'}
+                behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
                 style={styles.writeTaskWrapper}
             >
                 <TextInput
@@ -69,6 +70,7 @@ export default function Home() {
                     </View>
                 </TouchableOpacity>
             </KeyboardAvoidingView>
+
         </View>
     );
 }
