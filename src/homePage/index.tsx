@@ -1,33 +1,33 @@
 import React, { useState } from 'react';
 import { KeyboardAvoidingView, Text, View, TextInput, TouchableOpacity, Keyboard, ScrollView, Platform } from 'react-native';
 
-import Task from '../components';
+import { Task } from '../componentsTask';
 import { styles } from './styles';
 
 export function Home() {
-    const [task, setTask] = useState<any | null>();
+    const [task, setTask] = useState<string | undefined>();
     const [taskItems, setTaskItems] = useState([] as any);
     const handleAddTask = () => {
         Keyboard.dismiss();
-        setTaskItems([...taskItems, task])
+        setTaskItems([...taskItems, task]);
         setTask(undefined);
     }
     const completeTask = (index: any) => {
         let itemsCopy = [...taskItems];
         itemsCopy.splice(index, 1);
-        setTaskItems(itemsCopy)
+        setTaskItems(itemsCopy);
     }
     return (
         <View style={styles.container}>
             <View style={styles.tasksWrapper}>
-                <Text style={styles.sectionTitle}>Today's tasks</Text>
+                <Text style={styles.sectionTitle}>Lista de Tarefas ✔</Text>
                 <KeyboardAvoidingView
                     behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
                     style={styles.writeTaskWrapper}
                 >
                     <TextInput
                         style={styles.input}
-                        placeholder='Write a task'
+                        placeholder= 'Digite sua tarefa 😍😎'
                         value={task}
                         onChangeText={text => setTask(text)} />
                     <TouchableOpacity onPress={() => handleAddTask()}>

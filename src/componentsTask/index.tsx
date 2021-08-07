@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import styles from './styles';
+import { styles } from './styles';
 
-export default function Task(props: any) {
+export function Task(props: any) {
   return (
     <View style={styles.item}>
       <View style={styles.itemLeft}>
