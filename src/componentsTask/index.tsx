@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { styles } from './styles';
-
-export function Task(props: any) {
+interface Props { text: string }
+export function Task(props: Props) {
   return (
     <View style={styles.item}>
       <View style={styles.itemLeft}>
