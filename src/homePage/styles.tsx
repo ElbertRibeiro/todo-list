@@ -1,32 +1,34 @@
 import { StyleSheet } from 'react-native';
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
     container: {
         backgroundColor: '#E8EAED',
-        marginTop: 25,
+        marginTop: 24,
     },
     tasksWrapper: {
-        paddingTop: 80,
-        paddingHorizontal: 20,
+        paddingTop: 32,
+        paddingHorizontal: 24,
     },
     sectionTitle: {
         fontSize: 24,
         fontWeight: 'bold'
     },
     items: {
-        marginTop: 30,
+        marginTop: 8,
+        paddingHorizontal: 32,
     },
     writeTaskWrapper: {
-        position: 'absolute',
+        position: 'relative',
         bottom: 60,
         width: '100%',
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignItems: 'center',
+        marginTop: 90,
     },
     input: {
-        paddingVertical: 15,
-        paddingHorizontal: 15,
+        paddingVertical: 16,
+        paddingHorizontal: 16,
         backgroundColor: '#FFF',
         borderRadius: 60,
         borderColor: '#C0C0C0',
@@ -45,4 +47,3 @@ const styles = StyleSheet.create({
     },
     addText: {},
 });
-export default styles;
