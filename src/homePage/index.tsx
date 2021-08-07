@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import { KeyboardAvoidingView, Text, View, TextInput, TouchableOpacity, Keyboard, ScrollView, Platform } from 'react-native';
 
 import Task from '../components';
@@ -39,9 +39,7 @@ export function Home() {
 
             </View>
             <ScrollView
-                contentContainerStyle={{
-                    flexGrow: 1
-                }}
+                contentContainerStyle={{ flexGrow: 1 }}
                 keyboardShouldPersistTaps='handled'
                 style={styles.items}>
                 {
